@@ -1,0 +1,43 @@
+@mixin boxHW($H, $W) {
+    height: $H;
+    width: $W;
+}
+
+@mixin boxTRBL($T, $R, $B, $L) {
+    top: $T;
+    right: $R;
+    bottom: $B;
+    left: $L;
+}
+
+
+@mixin tenstyl($rad) {
+    border-radius: $rad;
+    -moz-box-shadow: 0 0 $rad black, 0 0 ($rad/1.5) black inset;
+    -webkit-box-shadow: 0 0 $rad black, 0 0 ($rad/1.5) black inset;
+    box-shadow: 0 0 $rad black, 0 0 ($rad/1.5) black inset;
+}
+
+
+.boxEXT{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    @include boxHW(100%, 100%);
+}
+
+mat-toolbar.mat-toolbar.mat-toolbar-single-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    .guzikNavBar {
+        @include tenstyl(0.2rem);
+        height: 3rem;
+        margin: 0.4rem;
+        padding: 0.4rem;
+    }
+}

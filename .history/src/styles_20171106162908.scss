@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+// czesciowo na poodstawie https://github.com/tomastrajan/angular-ngrx-material-starter/blob/master/src/styles.scss
+
+@import 'varibles/styles-variables';
+
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/utilities';
+
+@import 'resets/styles-reset';
+
+@import '~@angular/material/theming';
+@include mat-core();
+@import 'themes/default-theme.scss';
+@import 'themes/light-theme.scss';
+@import 'themes/black-theme.scss';
+
+@import 'resets/styles-reset.scss-theme';
+
+/**
+@import 'app/app.component.scss-theme';
+@import 'app/shared/big-input/big-input.component.scss-theme';
+@import 'app/static/about/about.component.scss-theme';
+@import 'app/examples/todos/todos.component.scss-theme';
+@import 'app/examples/stock-market/stock-market.component.sccs-theme';
+@import 'app/examples/theming/parent/parent.component.scss-theme';
+@import 'app/examples/theming/child/child.component.scss-theme';
+
+@mixin custom-components-theme($theme) {
+    @include anms-styles-reset-theme($theme);
+    @include anms-app-component-theme($theme);
+    @include anms-about-component-theme($theme);
+    @include anms-big-input-component-theme($theme);
+    @include anms-todos-component-theme($theme);
+    @include anms-examples-component-theme($theme);
+    @include anms-parent-component-theme($theme);
+    @include anms-child-component-theme($theme);
+ }
+ */
+
+@include angular-material-theme($anms-theme);
+
+html, body {
+     position: absolute;
+     height:100%;
+     width:100%;
+}
+/*
+.default-theme {
+  @include angular-material-theme($anms-theme);
+ // @include custom-components-theme($anms-theme);
+}
+
+.light-theme {
+  @include angular-material-theme($anms-light-theme);
+//  @include custom-components-theme($anms-light-theme);
+}
+
+.black-theme {
+  @include angular-material-theme($anms-black-theme);
+//  @include custom-components-theme($anms-black-theme);
+}*/

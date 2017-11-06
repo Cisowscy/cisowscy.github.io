@@ -1,0 +1,20 @@
+@mixin ukotwiczenieEXT($wymiar, $rodzaj) {
+    height: $wymiar;
+    width: $wymiar;
+    position: $rodzaj;
+}
+
+@mixin ukotwiczenieINT($wymiar, $rodzaj) {
+    top: $wymiar;
+    right: $wymiar;
+    bottom: $wymiar;
+    left: $wymiar;
+    position: $rodzaj;
+}
+
+
+.boxEXT{
+    overflow: hidden;
+    border: solid blueviolet;
+    @include ukotwiczenieEXT(100%, relative);
+}
