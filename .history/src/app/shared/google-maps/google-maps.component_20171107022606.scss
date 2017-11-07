@@ -1,0 +1,35 @@
+agm-map {
+  height: 300px;
+}
+
+
+//////////////////////////////
+// Variables
+//////////////////////////////
+
+// Set the Snazzy Info Window SCSS variables before
+// the plugin's SCSS is imported. Check the /dist/_settings.scss
+// for the available variables.
+
+$si-content-padding:        60px;
+$si-border-width:           8px;
+$si-border-color:           #2b3031;
+$si-font-size:	            18px;
+$si-shadow-h:           	20px;
+$si-shadow-v:           	20px;
+$si-shadow-blur:        	0;
+$si-shadow-spread:          0;
+$si-shadow-opacity:         0.4;
+$si-close-font-size:        2em;
+$si-close-opacity:          0.7;
+$si-close-hover-opacity:    1;
+
+
+
+//////////////////////////////
+// Imports
+//////////////////////////////
+
+// Import the Snazzy Info Window SCSS.
+
+@import "~snazzy-info-window/dist/snazzy-info-window.scss";

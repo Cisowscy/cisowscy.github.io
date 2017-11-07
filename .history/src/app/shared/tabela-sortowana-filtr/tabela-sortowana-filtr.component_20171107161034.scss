@@ -1,0 +1,74 @@
+@mixin TloObrazek($adres, $typ) {
+    background: $adres $typ center center fixed;
+}
+
+@mixin TloTabelki($Kolor) {
+    @include TloObrazek(url(../../../assets/images/desen/black-linen.png), repeat);
+    background-color: $Kolor;
+     //black-linen.png
+     //
+}
+
+/* Structure */
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+.example-header {
+    min-height: 56px;
+    max-height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 8px 24px 0;
+    font-size: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid transparent;
+}
+
+.mat-input-container {
+    font-size: 14px;
+    flex-grow: 1;
+    margin-left: 32px;
+    margin-top: 8px;
+}
+
+.example-no-results {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+/** Selection styles */
+
+.example-selection-header {
+    font-size: 18px;
+    @include TloTabelki(rgba(255, 64, 129, 0.4));
+    border-bottom: 1px solid #d696ac;
+}
+
+.mat-column-select {
+    max-width: 54px;
+}
+
+.mat-row:hover,
+.example-selected-row {
+     @include TloTabelki(rgba(245, 245, 245, 0.7));
+}
+
+.mat-row:active,
+.mat-row.example-selected-row {
+     @include TloTabelki(rgba(234, 234, 234, 0.7));
+}
+
+.mat-table {
+    overflow: auto;
+    max-height: 300px;
+    @include TloTabelki(rgba(0, 0, 0, 0.4));
+    
+}

@@ -1,0 +1,79 @@
+@mixin TloObrazek($adres, $typ) {
+    background: $adres $typ center center fixed;
+}
+
+@mixin TloTabelki($Kolor) {
+    @include TloObrazek(url(../../../assets/images/desen/hexellence.png), repeat);
+    background-color: $Kolor;
+     //black-linen.png
+     //dark-denim.png
+     //diagmonds.png
+     //diagmonds-light.png
+}
+
+/* Structure */
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 19rem;
+}
+
+.example-header {
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem 0;
+    font-size: 1.3rem;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid transparent;
+}
+
+.mat-input-container {
+    font-size: 1rem;
+    flex-grow: 1;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+.example-no-results {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+
+/** Selection styles */
+
+.example-selection-header, .mat-paginator {
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 700;
+    @include TloTabelki(rgba(180, 40, 80, 0.6));
+}
+.mat-paginator-container{
+    max-height: 2.5rem;
+}
+.mat-column-select {
+    max-width: 3rem;
+}
+
+.mat-row:hover,
+.example-selected-row {
+     @include TloTabelki(rgba(212, 204, 139, 0.6));
+}
+
+.mat-row:active,
+.mat-row.example-selected-row {
+     @include TloTabelki(rgba(255, 255, 255, 0.5));
+}
+
+.mat-table {
+    overflow: auto;
+    max-height: 19rem;
+    @include TloTabelki(rgba(0, 0, 0, 0.7));
+    
+}
