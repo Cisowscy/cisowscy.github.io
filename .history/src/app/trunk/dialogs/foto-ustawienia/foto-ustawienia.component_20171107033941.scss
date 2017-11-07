@@ -1,0 +1,27 @@
+.IncludeFotoWithTag{
+    width: 100%;
+}
+
+input.mat-chip-input{
+    color: white;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: pink;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: pink;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: pink;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: pink;
+}

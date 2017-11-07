@@ -1,0 +1,22 @@
+<h4>{{ title }}</h4>
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat0" [longitude]="lng0" disableDefaultUI="true" [styles]="MapTypeStyle" mapTypeId="terrain" [zoom]="zblizenie">
+  <!-- marker  [label]="labelOptions" -->
+  <agm-marker *ngFor="punkt of punkty" [latitude]="punkt.lat" [longitude]="punkt.lng">
+    <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
+        <ng-template>
+          My first Snazzy Info Window!
+        </ng-template>
+    </agm-snazzy-info-window>
+  </agm-marker>
+
+  <!--<agm-snazzy-info-window [isOpen]="true" [latitude]="51.673858" [longitude]="7.815982" [closeWhenOthersOpen]="true">
+    <ng-template>
+      My first Snazzy Info Window!
+    </ng-template>
+  </agm-snazzy-info-window>-->
+</agm-map>
+
+ *ngFor="let jezyk of jezykOpcje"

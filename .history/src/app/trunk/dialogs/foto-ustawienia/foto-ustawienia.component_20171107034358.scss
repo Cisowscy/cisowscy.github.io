@@ -1,0 +1,16 @@
+.IncludeFotoWithTag{
+    width: 100%;
+}
+
+input.mat-chip-input{
+    
+}
+input.mat-chip-input::placeholder {
+    color: red;
+}
+div.mat-input-infix.mat-form-field-infix{
+color: white;
+}
+div.mat-input-infix.mat-form-field-infix::placeholder {
+    color: pink;
+}

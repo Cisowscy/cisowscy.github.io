@@ -1,0 +1,63 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-header" [style.display]="selection.isEmpty() ? '' : 'none'">
+    <mat-input-container floatPlaceholder="never">
+      <input matInput #filter placeholder="Filter users">
+    </mat-input-container>
+  </div>
+  <div class="example-header example-selection-header" *ngIf="!selection.isEmpty()">
+    {{selection.selected.length}} {{selection.selected.length == 1 ? 'user' : 'users'}} selected
+  </div>
+
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Checkbox Column -->
+    <ng-container cdkColumnDef="select">
+      <mat-header-cell *cdkHeaderCellDef>
+        <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()">
+        </mat-checkbox>
+      </mat-header-cell>
+      <mat-cell *cdkCellDef="let row">
+        <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row.id) : null" [checked]="selection.isSelected(row.id)">
+        </mat-checkbox>
+      </mat-cell>
+    </ng-container>
+
+    <!-- ID Column -->
+    <ng-container cdkColumnDef="userId">
+      <mat-header-cell *cdkHeaderCellDef mat-sort-header> ID </mat-header-cell>
+      <mat-cell *cdkCellDef="let row"> {{row.id}} </mat-cell>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container cdkColumnDef="progress">
+      <mat-header-cell *cdkHeaderCellDef mat-sort-header> ilosc fot. </mat-header-cell>
+      <mat-cell *cdkCellDef="let row"> {{row.progress}}% </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container cdkColumnDef="userName">
+      <mat-header-cell *cdkHeaderCellDef mat-sort-header> Temat-Tag </mat-header-cell>
+      <mat-cell *cdkCellDef="let row"> {{row.name}} </mat-cell>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container cdkColumnDef="color">
+      <mat-header-cell *cdkHeaderCellDef mat-sort-header> Dominujacy Kolor </mat-header-cell>
+      <mat-cell *cdkCellDef="let row" [style.color]="row.color"> {{row.color}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *cdkHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *cdkRowDef="let row; columns: displayedColumns;" [class.example-selected-row]="selection.isSelected(row.id)" (click)="selection.toggle(row.id)">
+    </mat-row>
+  </mat-table>
+
+  <div class="example-no-results" [style.display]="dataSource?.renderedData.length == 0 ? '' : 'none'">
+    No users found matching filter.
+  </div>
+
+  <mat-paginator #paginator [length]="dataSource?.filteredData.length" [pageIndex]="0" [pageSize]="25" [pageSizeOptions]="[5, 10, 25, 100]">
+  </mat-paginator>
+</div>
