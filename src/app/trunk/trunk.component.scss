@@ -18,6 +18,16 @@
     -webkit-box-shadow: 0 0 $rad black, 0 0 ($rad/1.5) black inset;
     box-shadow: 0 0 $rad black, 0 0 ($rad/1.5) black inset;
 }
+@mixin tenstylNR($rad) {
+    -moz-box-shadow: 0 0 $rad black, 0 0 ($rad/1.5) black inset;
+    -webkit-box-shadow: 0 0 $rad black, 0 0 ($rad/1.5) black inset;
+    box-shadow: 0 0 $rad black, 0 0 ($rad/1.5) black inset;
+}
+@mixin tenstylNRre($rad) {
+    -moz-box-shadow: 0 0 $rad black inset, 0 0 ($rad/1.5) black;
+    -webkit-box-shadow: 0 0 $rad black inset, 0 0 ($rad/1.5) black;
+    box-shadow: 0 0 $rad black inset, 0 0 ($rad/1.5) black;
+}
 @mixin obrazekTMP() {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -40,7 +50,17 @@
     align-items: $Iitems_Align;
     align-content: $Content_Align;
 }
+@mixin TloObrazek($adres, $typ) {
+    background: $adres $typ center center fixed;
+}
 
+@mixin TloTabelki($Kolor) {
+    @include TloObrazek(url(../../assets/images/desen/rebel.png), repeat);
+    background-color: $Kolor; //black-linen.png
+    //dark-denim.png
+    //diagmonds.png
+    //diagmonds-light.png
+}
 
 main.KL1{
     @include HeightWidth(100%, 100%);
@@ -71,8 +91,30 @@ mat-toolbar.mat-toolbar.mat-toolbar-single-row {
         mat-slide-toggle.mat-slide-toggle{
             -ms-transform: rotate(90deg); /* IE 9 */
             -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
-            transform: rotate(90deg);
-            margin-top: -1rem;
+            transform: rotate(-90deg);
+            top: -0.3rem;
+            position: relative;
+        }
+        .mat-slide-toggle-bar, .mat-slide-toggle-thumb{
+
+        }
+        .mat-slide-toggle .mat-slide-toggle-thumb{
+            @include TloTabelki(rgba(50, 200, 255, 0.6));
+            @include tenstylNR(0.5rem);
+        }
+        .mat-slide-toggle .mat-slide-toggle-bar {
+            @include TloTabelki(rgba(50, 200, 255, 0.4));
+            @include tenstylNR(0.5rem);
+        }
+        .mat-slide-toggle.mat-checked:not(.mat-disabled) {
+            .mat-slide-toggle-thumb {
+                @include TloTabelki(rgba(255, 52, 52, 0.6));
+                @include tenstylNR(0.5rem);
+            }
+            .mat-slide-toggle-bar {
+                @include TloTabelki(rgba(255, 52, 52, 0.4));
+                @include tenstylNRre(0.5rem);
+            }
         }
     }
 }
@@ -82,15 +124,17 @@ div.cdk-overlay-container {
         //background-color: rgba(180, 0, 0, 0.7);
     }
 }
-.tmp11{
+
+mat-dialog-container.mat-dialog-container {
+    @include obrazekNOFIX(url(../../assets/images/desen/gravel.png), repeat);
+    @include tenstyl(1rem);   
+}
+
+.tmp11 {
     background-color: rgba(255, 255, 255, 0.507);
     @include tenstyl(1rem);
     width: 20rem;
     height: 12rem;
     margin: 6rem;
     padding: 1rem;
-}
-mat-dialog-container.mat-dialog-container {
-    @include obrazekNOFIX(url(../../assets/images/desen/gravel.png), repeat);
-    @include tenstyl(1rem);
 }

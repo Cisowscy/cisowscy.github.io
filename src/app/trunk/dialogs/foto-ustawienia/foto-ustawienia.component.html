@@ -1,6 +1,27 @@
 <h1> {{ NAZWA_PANELU_UST_FOTO }} </h1>
-<div class="PaenelUstFot"><h4>miejsca gdzie wykonano zdjęcia</h4>
-<app-google-maps></app-google-maps></div>
-<div class="PaenelUstFot"><h4>uwzglednij w pokazie następujace tematy</h4>
-<app-tabela-sortowana-filtr>
-</app-tabela-sortowana-filtr></div>
+<mat-tab-group>
+    <mat-tab  class="PaenelUstFotTAB" label="Miejsca">
+    <div class="PaenelUstFot">
+        <h4>Uwzględnienij zdjęcia wykonane na obszarze</h4>
+        <app-google-maps></app-google-maps>
+    </div>
+    </mat-tab>
+    <mat-tab class="PaenelUstFotTAB" label="Tematy">
+        <div class="PaenelUstFot">
+            <h4>Uwzględnienij tematy zdjęć</h4>
+            <app-tabela-sortowana-filtr>
+            </app-tabela-sortowana-filtr>
+        </div>
+    </mat-tab>
+    <mat-tab class="PaenelUstFotTAB" label="Zakres Czasu">
+        <div class="PaenelUstFot">
+            <h4>Uwzględnienij zdjęcia wykonane w zakresie czasu</h4>
+            
+        </div>
+    </mat-tab>
+</mat-tab-group>
+
+
+
+
+

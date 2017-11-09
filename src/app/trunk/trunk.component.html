@@ -3,60 +3,64 @@
 <main class="KL1">
   <nav>
     <mat-toolbar>
-      <span class="guzikNavBar"> {{nazwaWWW}} </span>
       <span class="guzikNavBar">
-        <mat-slide-toggle></mat-slide-toggle>
-        <button mat-icon-button (click)="openDialogFotoPokaz()">
+        <a mat-button [routerLink]="['']">
+          {{nazwaWWW}}
+          <mat-icon>panorama</mat-icon>
+        </a>
+        <span class="guzikTogglePion">
+          <mat-slide-toggle></mat-slide-toggle>
+        </span>
+        <a mat-icon-button (click)="openDialogFotoPokaz()">
           <mat-icon>slideshow</mat-icon>
-        </button>
+        </a>
       </span>
       <span class="guzikNavBar">
-        <button mat-button>ddddd
-          <mat-icon>slideshow</mat-icon>
-        </button>
+        <a mat-button [routerLink]="['foto-pod-roz']">
+          <mat-icon>flight</mat-icon>
+          <mat-icon>directions_boat</mat-icon>
+          <mat-icon>train</mat-icon>          
+          <mat-icon>directions_bike</mat-icon>
+          <mat-icon>directions_walk</mat-icon>
+        </a>
       </span>
       <span class="guzikNavBar">
-        <button mat-button>ddddd
-          <mat-icon>slideshow</mat-icon>
-        </button>
+        <a mat-button [routerLink]="['ewidencja']">ewidencja
+        </a>
       </span>
       <span class="guzikNavBar">
-        <button mat-button>ddddd
-          <mat-icon>slideshow</mat-icon>
-        </button>
+        <a mat-button [routerLink]="['CISGEN']">Grono-Teka
+        </a>
       </span>
       <span class="guzikNavBar">
-        <button mat-button>ddddd
-          <mat-icon>slideshow</mat-icon>
-        </button>
+        <a mat-button [routerLink]="['DNAETNOGEN']">Genealogia
+        </a>
       </span>
       <span class="guzikNavBar">
-        <button mat-button>ddddd
-          <mat-icon>slideshow</mat-icon>
-        </button>
-      </span>
-      <span class="guzikNavBar">
-        <button mat-button>ddddd
-          <mat-icon>slideshow</mat-icon>
-        </button>
-      </span>
-      <span class="guzikNavBar">
-        <button mat-button>ddddd
-          <mat-icon>slideshow</mat-icon>
-        </button>
+        <a mat-button [routerLink]="['lotnictwo']">Lotnictwo
+        </a>
       </span>
     </mat-toolbar>
   </nav>
   <article class="KL2">
-    <main class="KL3">
+    <router-outlet>
+    </router-outlet>
+  </article>
+</main>
+
+
+<!--
+
+  <main class="KL3">
     <p>
       trunk works!
     </p>
     <p class="tmp11">
-       Result from dialog: {{ result }}
+      Result from dialog: {{ result }}
     </p>
-   
+  
+  
+  </main>
 
-    </main>
-  </article>
-</main>
+
+-->
