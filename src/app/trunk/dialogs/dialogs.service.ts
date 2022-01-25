@@ -2,6 +2,11 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs/Observable";
 import { MatDialogRef, MatDialog } from "@angular/material";
 
+<<<<<<< HEAD
+=======
+import { ConfirmDialogComponent } from "./confirm-dialog/confirm-dialog.component";
+import { FotoUstawieniaComponent } from "./foto-ustawienia/foto-ustawienia.component";
+>>>>>>> Dialog_Ustawienia_FotoPokazu
 
 import { FotoUstawieniaComponent } from "./foto-ustawienia/foto-ustawienia.component";
 

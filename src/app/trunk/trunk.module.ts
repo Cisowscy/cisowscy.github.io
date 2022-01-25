@@ -4,11 +4,14 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialsModule } from "../materials/materials.module";
 
+<<<<<<< HEAD
 import { RouterModule } from "@angular/router";
 
 
 import { TRUNK_ROUTES } from "./trunk.routing";
 
+=======
+>>>>>>> Dialog_Ustawienia_FotoPokazu
 
 import { TrunkComponent } from "./trunk.component";
 import { DialogsModule } from "./dialogs/dialogs.module";

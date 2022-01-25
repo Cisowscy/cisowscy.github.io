@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import { Component } from '@angular/core';
 //import { MY_FOTO } from "../../trunk/foto-pokaz.data";
 //import { FotoPokazMapa } from "../../trunk/foto-pokaz.model";
+=======
+import {
+  Component
+} from '@angular/core';
+
+>>>>>>> Dialog_Ustawienia_FotoPokazu
 @Component({
   selector: "app-google-maps",
   templateUrl: "./google-maps.component.html",
@@ -8,6 +15,7 @@ import { Component } from '@angular/core';
 })
 //export class GoogleMapsComponent implements OnInit {
 export class GoogleMapsComponent {
+<<<<<<< HEAD
   //title: string = "miejsca gdzie wykonano zdjęcia";
   lat0: number = 46.301435;
   lng0: number = 16.88355;
@@ -78,6 +86,15 @@ export class GoogleMapsComponent {
 {lat: 49.664490, lng: -124.903035, label: "", draggable: false},
 {lat: 49.664490, lng: -124.903035, label: "", draggable: false}
   ]
+=======
+  title: string = "miejsca gdzie wykonano zdjęcia";
+  lat0: number = 46.301435;
+  lng0: number = 16.88355;
+  zblizenie: number = 5;
+  
+  lat: number = 51.678418;
+  lng: number = 7.809007;
+>>>>>>> Dialog_Ustawienia_FotoPokazu
 
   labelOptions = {
     color: "#CC40A0",
@@ -170,10 +187,13 @@ export class GoogleMapsComponent {
   constructor() {}
 
   // ngOnInit() {}
+<<<<<<< HEAD
 }
 interface marker {
 	lat: number;
 	lng: number;
 	label?: string;
 	draggable: boolean;
+=======
+>>>>>>> Dialog_Ustawienia_FotoPokazu
 }

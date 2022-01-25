@@ -1,7 +1,13 @@
+<<<<<<< HEAD
+=======
+<h4>{{ title }}</h4>
+
+>>>>>>> Dialog_Ustawienia_FotoPokazu
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
 <agm-map [latitude]="lat0" [longitude]="lng0" disableDefaultUI="true" [styles]="MapTypeStyle" mapTypeId="terrain" [zoom]="zblizenie">
   <!-- marker  [label]="labelOptions" -->
+<<<<<<< HEAD
   <!-- 
     <agm-marker *ngFor="let m of markers; let i = index"
           (markerClick)="clickedMarker(m.label, i)"
@@ -16,6 +22,9 @@
           [longitude]="m.lng"
           [label]="m.label"
           [markerDraggable]="m.draggable">
+=======
+  <agm-marker [latitude]="lat" [longitude]="lng">
+>>>>>>> Dialog_Ustawienia_FotoPokazu
     <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
         <ng-template>
           My first Snazzy Info Window!

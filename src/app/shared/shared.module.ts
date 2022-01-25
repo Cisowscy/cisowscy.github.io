@@ -8,7 +8,10 @@ import { AgmCoreModule } from '@agm/core';
 import { GoogleMapsComponent } from './google-maps/google-maps.component';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 import { TabelaSortowanaFiltrComponent } from './tabela-sortowana-filtr/tabela-sortowana-filtr.component';
+<<<<<<< HEAD
 //import { FotoPokazService } from "../trunk/foto-pokaz.service";
+=======
+>>>>>>> Dialog_Ustawienia_FotoPokazu
 
 
 @NgModule({
@@ -22,7 +25,10 @@ import { TabelaSortowanaFiltrComponent } from './tabela-sortowana-filtr/tabela-s
     MaterialsModule
   ],
   declarations: [GoogleMapsComponent, TabelaSortowanaFiltrComponent],
+<<<<<<< HEAD
   //providers: [FotoPokazService],
+=======
+>>>>>>> Dialog_Ustawienia_FotoPokazu
   exports: [GoogleMapsComponent, TabelaSortowanaFiltrComponent]
 })
 export class SharedModule { }

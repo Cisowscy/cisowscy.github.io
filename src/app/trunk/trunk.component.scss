@@ -138,3 +138,7 @@ mat-dialog-container.mat-dialog-container {
     margin: 6rem;
     padding: 1rem;
 }
+mat-dialog-container.mat-dialog-container {
+    @include obrazekNOFIX(url(../../assets/images/desen/gravel.png), repeat);
+    @include tenstyl(1rem);
+}
